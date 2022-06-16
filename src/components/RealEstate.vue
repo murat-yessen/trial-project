@@ -9,9 +9,9 @@
 
       <div class="cards">
         <div v-for="(item, index) in items" :key="index" :class="item.class">
-            <span class="city-name">{{item.city_name}}</span>
-            <span class="price">{{item.price}}</span>
-            <img :src="require(`@/assets/icons/${item.img_src}`)" alt="">
+          <span class="city-name">{{ item.city_name }}</span>
+          <span class="price">{{ item.price }}</span>
+          <img :src="require(`@/assets/icons/${item.img_src}`)" alt="" />
         </div>
       </div>
     </div>
@@ -28,31 +28,31 @@ export default {
           city_name: "Алания",
           price: "от 1700 евро",
           img_src: "light-arrow.svg",
-          class: "card1"
+          class: "card1",
         },
         {
           city_name: "Кипр",
           price: "от 1700 евро",
           img_src: "light-arrow.svg",
-          class: "card2"
+          class: "card2",
         },
         {
           city_name: "Мерсин",
           price: "от 1700 евро",
           img_src: "light-arrow.svg",
-          class: "card3"
+          class: "card3",
         },
         {
           city_name: "Анталия",
           price: "от 1700 евро",
           img_src: "light-arrow.svg",
-          class: "card4"
+          class: "card4",
         },
         {
           city_name: "Стамбул",
           price: "от 1700 евро",
           img_src: "light-arrow.svg",
-          class: "card5"
+          class: "card5",
         },
       ],
     };
