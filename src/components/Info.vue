@@ -40,6 +40,12 @@ section {
     display: inherit;
     align-items: center;
     gap: 31.54px;
+
+    span {
+      font-family: $firasans;
+      line-height: 42px;
+      font-weight: 600;
+    }
   }
 }
 </style>
