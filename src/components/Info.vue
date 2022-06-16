@@ -1,17 +1,9 @@
 <template>
   <section>
     <div class="wrap">
-      <div>
-        <img src="./../assets/icons/correct.svg" alt="" />
-        <span>Более 30 000 объектов</span>
-      </div>
-      <div>
-        <img src="./../assets/icons/shield.svg" alt="" />
-        <span>Юридическое сопровождение</span>
-      </div>
-      <div>
-        <img src="./../assets/icons/progress.svg" alt="" />
-        <span>Динамичное ценообразование</span>
+      <div v-for="(item, index) in items" :key="index">
+        <img :src="require(`@/assets/icons/${item.icon}`)" alt="" />
+        <span>{{ item.label }}</span>
       </div>
     </div>
   </section>
@@ -20,6 +12,15 @@
 <script>
 export default {
   name: "Info",
+  data() {
+    return {
+      items: [
+        { icon: "correct.svg", label: "Более 30 000 объектов" },
+        { icon: "shield.svg", label: "Юридическое сопровождение" },
+        { icon: "progress.svg", label: "Динамичное ценообразование" },
+      ],
+    };
+  },
 };
 </script>
 
