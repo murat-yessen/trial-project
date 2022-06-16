@@ -8,30 +8,10 @@
       </p>
 
       <div class="cards">
-        <div class="card1">
-          <span class="city-name">Алания</span>
-          <span class="price">от 1700 евро</span>
-          <img src="./../assets/icons/light-arrow.svg" alt="" />
-        </div>
-        <div class="card2">
-          <span class="city-name">Кипр</span>
-          <span class="price">от 1700 евро</span>
-          <img src="./../assets/icons/light-arrow.svg" alt="" />
-        </div>
-        <div class="card3">
-          <span class="city-name">Мерсин</span>
-          <span class="price">от 1700 евро</span>
-          <img src="./../assets/icons/light-arrow.svg" alt="" />
-        </div>
-        <div class="card4">
-          <span class="city-name">Анталия</span>
-          <span class="price">от 1700 евро</span>
-          <img src="./../assets/icons/light-arrow.svg" alt="" />
-        </div>
-        <div class="card5">
-          <span class="city-name">Стамбул</span>
-          <span class="price">от 1700 евро</span>
-          <img src="./../assets/icons/light-arrow.svg" alt="" />
+        <div v-for="(item, index) in items" :key="index" :class="item.class">
+            <span class="city-name">{{item.city_name}}</span>
+            <span class="price">{{item.price}}</span>
+            <img :src="require(`@/assets/icons/${item.img_src}`)" alt="">
         </div>
       </div>
     </div>
@@ -41,6 +21,42 @@
 <script>
 export default {
   name: "RealEstate",
+  data() {
+    return {
+      items: [
+        {
+          city_name: "Алания",
+          price: "от 1700 евро",
+          img_src: "light-arrow.svg",
+          class: "card1"
+        },
+        {
+          city_name: "Кипр",
+          price: "от 1700 евро",
+          img_src: "light-arrow.svg",
+          class: "card2"
+        },
+        {
+          city_name: "Мерсин",
+          price: "от 1700 евро",
+          img_src: "light-arrow.svg",
+          class: "card3"
+        },
+        {
+          city_name: "Анталия",
+          price: "от 1700 евро",
+          img_src: "light-arrow.svg",
+          class: "card4"
+        },
+        {
+          city_name: "Стамбул",
+          price: "от 1700 евро",
+          img_src: "light-arrow.svg",
+          class: "card5"
+        },
+      ],
+    };
+  },
 };
 </script>
 
