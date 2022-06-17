@@ -11,7 +11,7 @@
         <div v-for="(item, index) in items" :key="index">
           <div class="imgs">
             <img :src="require(`@/assets/images/${item.img}`)" alt="" />
-            <span>{{ item.badge }}</span>
+            <span :class="item.class">{{ item.badge }}</span>
           </div>
           <div class="info">
             <h3>{{ item.label }}</h3>
@@ -38,6 +38,7 @@ export default {
           label: "Пора золотых цен",
           country: "Анталья",
           description: "Доступная недвижимость в городах Турции с 21 апреля",
+          class: "news",
         },
         {
           img: "news_2.png",
@@ -45,6 +46,7 @@ export default {
           label: "Пора золотых цен",
           country: "Казахстан",
           description: "Доступная недвижимость в городах Турции с 21 апреля",
+          class: "news",
         },
         {
           img: "news_3.png",
@@ -52,6 +54,7 @@ export default {
           label: "Пора золотых цен",
           country: "Казахстан",
           description: "Доступная недвижимость в городах Турции с 21 апреля",
+          class: "event",
         },
       ],
     };
@@ -122,6 +125,14 @@ section {
           font-size: 14px;
           line-height: 16.8px;
           clip-path: polygon(0 0, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+
+          &.news {
+            background-color: $black;
+          }
+
+          &.event {
+            background-color: $event-badge;
+          }
         }
       }
 
