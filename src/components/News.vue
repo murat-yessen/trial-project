@@ -21,14 +21,21 @@
         </div>
       </div>
 
-      <button>Смотреть больше</button>
+      <div class="read-more">
+        <ReadMore />
+      </div>
     </div>
   </section>
 </template>
 
 <script>
+import ReadMore from "./ReadMore.vue";
+
 export default {
   name: "News",
+  components: {
+    ReadMore,
+  },
   data() {
     return {
       items: [
@@ -173,6 +180,12 @@ section {
           text-align: left;
         }
       }
+    }
+
+    .read-more {
+      display: flex;
+      justify-content: center;
+      padding-top: 60px;
     }
   }
 }

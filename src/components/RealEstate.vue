@@ -14,13 +14,22 @@
           <img :src="require(`@/assets/icons/${item.img_src}`)" alt="" />
         </div>
       </div>
+
+      <div class="read-more">
+        <ReadMore />
+      </div>
     </div>
   </section>
 </template>
 
 <script>
+import ReadMore from "./ReadMore.vue";
+
 export default {
   name: "RealEstate",
+  components: {
+    ReadMore,
+  },
   data() {
     return {
       items: [
@@ -91,6 +100,12 @@ section {
     font-weight: 400;
     line-height: 40px;
     margin-bottom: 34px;
+  }
+  
+  .read-more {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
   }
 }
 
