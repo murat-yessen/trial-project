@@ -3,6 +3,7 @@
     <RealEstate />
     <Info />
     <Videos />
+    <News />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import RealEstate from "@/components/RealEstate.vue";
 import Info from "@/components/Info.vue";
 import Videos from "@/components/Videos.vue";
+import News from "@/components/News.vue";
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     RealEstate,
     Info,
     Videos,
+    News,
   },
 };
 </script>
