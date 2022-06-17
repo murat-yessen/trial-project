@@ -10,8 +10,18 @@
       <div class="cards">
         <div v-for="(item, index) in items" :key="index" :class="item.class">
           <img :src="require(`@/assets/images/${item.file}`)" alt="" />
+          <img
+            :src="require('@/assets/images/star.png')"
+            v-if="item.star"
+            class="star"
+            alt=""
+          />
           <span>{{ item.label }}</span>
-          <img :src="require(`@/assets/icons/arrow-black.svg`)" alt="" />
+          <img
+            :src="require(`@/assets/icons/arrow-black.svg`)"
+            class="arrow"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -28,6 +38,7 @@ export default {
           file: "category_1.png",
           class: "card1",
           label: "Горячие предложения",
+          star: true,
         },
         { file: "category_2.png", class: "card2", label: "Апартаменты" },
         {
@@ -103,12 +114,18 @@ export default {
         font-weight: 600;
         font-size: 24px;
         line-height: 32px;
+      }
 
-        & + img {
-          position: absolute;
-          left: 20px;
-          bottom: 30px;
-        }
+      .star {
+        position: absolute;
+        left: 20px;
+        top: 108px;
+      }
+
+      .arrow {
+        position: absolute;
+        left: 20px;
+        bottom: 30px;
       }
     }
 
