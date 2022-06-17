@@ -7,6 +7,7 @@
     <Reviews />
     <Videos />
     <News />
+    <Footer />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Videos from "@/components/Videos.vue";
 import News from "@/components/News.vue";
 import Category from "@/components/Category.vue";
 import Reviews from "@/components/Reviews.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "App",
@@ -29,6 +31,7 @@ export default {
     Reviews,
     Videos,
     News,
+    Footer,
   },
 };
 </script>
