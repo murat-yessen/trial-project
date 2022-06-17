@@ -3,6 +3,7 @@
     <RealEstate />
     <Info />
     <Category />
+    <Reviews />
     <Videos />
     <News />
   </div>
@@ -14,6 +15,7 @@ import Info from "@/components/Info.vue";
 import Videos from "@/components/Videos.vue";
 import News from "@/components/News.vue";
 import Category from "@/components/Category.vue";
+import Reviews from "@/components/Reviews.vue";
 
 export default {
   name: "App",
@@ -21,6 +23,7 @@ export default {
     RealEstate,
     Info,
     Category,
+    Reviews,
     Videos,
     News,
   },
